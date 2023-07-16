@@ -31,7 +31,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('take card', (msg) => {
-    console.log('Card taked: ', msg);
+    console.log('A card was taken from the deck: ', msg);
+
+    io.emit('take card', msg);
   });
 });
 
