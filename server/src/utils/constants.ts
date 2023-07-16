@@ -1,0 +1,9 @@
+export const COMODIN = 'comodin';
+export const RED = 'red';
+export const GREEN = 'green';
+export const BLUE = 'blue';
+export const YELLOW = 'yellow';
+export const ADD_TWO = '+2';
+export const ADD_FOUR = '+4';
+export const REVERSE = 'reverse';
+export const BLOCK = 'block';
