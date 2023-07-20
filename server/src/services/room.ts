@@ -1,11 +1,11 @@
-import { Player } from "./player.js";
-import { Deck } from "./deck.js";
-import { Card } from "./card.js";
+import { Player } from './player.js'
+import { Deck } from './deck.js'
+import { Card } from './card.js'
 
 export class Room {
   private playerList: Player[]
-  private mainDeck: Deck;
-  private playDeck: Deck;
+  private mainDeck: Deck
+  private playDeck: Deck
 
   create() {}
   join(link: string, player: Player) {}
