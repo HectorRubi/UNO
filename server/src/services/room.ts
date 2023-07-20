@@ -8,11 +8,15 @@ export class Room {
   private playDeck: Deck
 
   create() {}
-  join(link: string, player: Player) {}
+  join(link: string, player: Player) {
+    return { link, player }
+  }
   giveCardToPlayer(player: Player) {
     // Set last card from mainDeck into the player hand
+    return player
   }
   playCard(card: Card) {
     // Set the card into the playDeck
+    return card
   }
 }

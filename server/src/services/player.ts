@@ -5,6 +5,10 @@ export class Player {
   private name: string
   private hand: Hand
 
-  takeCard(card: Card) {}
-  playCard(index: number) {}
+  takeCard(card: Card) {
+    return card
+  }
+  playCard(index: number) {
+    return index
+  }
 }

@@ -1,12 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import { Boom } from '@hapi/boom'
 
-export function errorHandler(
-  err: Error,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export function errorHandler(err: Error, req: Request, res: Response) {
   res.status(500).json({
     code: 500,
     message: err.message,
