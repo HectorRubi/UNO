@@ -4,7 +4,7 @@ import { Request, Response } from 'express'
 
 import { router } from './libs'
 
-import { errorHandler } from './middlewares/error.handler'
+import { errorHandler, boomErrorHandler } from './middlewares/error.handler'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -17,6 +17,7 @@ app.get('/', (req: Request, res: Response) => {
 router(app)
 
 // Personal middlewares
+app.use(boomErrorHandler)
 app.use(errorHandler)
 
 app.listen(port, () => {
