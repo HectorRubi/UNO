@@ -1,13 +1,13 @@
-import 'dotenv/config'
 import express from 'express'
 import { Request, Response } from 'express'
 
+import { config } from './config'
 import { router } from './libs'
 
 import { errorHandler, boomErrorHandler } from './middlewares/error.handler'
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = config.port
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World')
