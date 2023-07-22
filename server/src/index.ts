@@ -2,7 +2,7 @@ import express from 'express'
 import { Request, Response } from 'express'
 
 import { config } from './config'
-import { router } from './libs'
+import { router } from './routes'
 
 import { errorHandler, boomErrorHandler } from './middlewares/error.handler'
 
