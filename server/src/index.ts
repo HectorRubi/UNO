@@ -9,6 +9,8 @@ import { errorHandler, boomErrorHandler } from './middlewares/error.handler'
 const app = express()
 const port = config.port
 
+app.use(express.json())
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World')
 })
