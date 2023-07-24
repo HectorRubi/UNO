@@ -1,3 +1,5 @@
+import { sequelize } from './../libs/sequelize'
+
 import { Player } from './player.js'
 import { Deck } from './deck.js'
 import { Card } from './card.js'
@@ -7,7 +9,11 @@ export class Room {
   private mainDeck: Deck
   private playDeck: Deck
 
-  create() {}
+  async create() {
+    const [data] = await sequelize.query('SELECT * FROM tbl_room')
+    return data
+  }
+
   join(link: string, player: Player) {
     return { link, player }
   }
