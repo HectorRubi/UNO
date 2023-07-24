@@ -5,7 +5,7 @@ import { roomRouter } from './room.router'
 
 export function router(app: Express) {
   const router = express.Router()
-  app.use('/api', router)
+  router.use('/room', roomRouter)
 
-  app.use('/room', roomRouter)
+  app.use('/api', router)
 }
