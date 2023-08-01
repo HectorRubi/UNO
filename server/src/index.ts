@@ -4,7 +4,7 @@ import { Request, Response } from 'express'
 import { config } from './config'
 import { router } from './routes'
 
-import { errorHandler, boomErrorHandler } from './middlewares/error.handler'
+import { errorHandler, boomErrorHandler } from './middleware/error.handler'
 
 const app = express()
 const port = config.port
@@ -18,7 +18,7 @@ app.get('/', (req: Request, res: Response) => {
 // Set router module
 router(app)
 
-// Personal middlewares
+// Personal middleware
 app.use(boomErrorHandler)
 app.use(errorHandler)
 
